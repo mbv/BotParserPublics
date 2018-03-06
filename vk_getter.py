@@ -21,7 +21,7 @@ bot = telegram.Bot(token=data['telegram_token'])
 last_date = data['last_date']
 ssl._create_default_https_context = ssl._create_unverified_context
 
-print(wall)
+
 for post in reversed(wall['items']):
     if post['date'] <= last_date:
         continue
