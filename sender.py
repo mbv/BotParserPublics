@@ -15,7 +15,7 @@ class Sender:
     def send_posts(self, posts):
         for post in posts:
             if post['date'] <= self.config.last_date:
-                return
+                break
 
             self.send_post(post)
 
