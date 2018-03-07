@@ -36,7 +36,7 @@ class ImageMaker:
 
         text_width = text_width + ImageMaker.PADDING_LEFT + ImageMaker.PADDING_RIGHT
 
-        image_height = image_height + text_height + 100
+        image_height = image_height + text_height + ImageMaker.PADDING_TOP + ImageMaker.PADDING_BOTTOM
         image_top = text_height + ImageMaker.PADDING_TOP + ImageMaker.PADDING_BOTTOM
         
         image_left = 0
