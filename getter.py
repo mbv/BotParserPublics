@@ -4,7 +4,7 @@ import vk
 class Getter:
     VK_TIMEOUT = 10
     VK_API_VERSION = '5.35'
-    VK_LANG = 10
+    VK_LANG = 'ru'
 
     def __init__(self, config):
         self.config = config
@@ -12,7 +12,7 @@ class Getter:
         self.api = vk.API(session, v=Getter.VK_API_VERSION, lang=Getter.VK_LANG, timeout=Getter.VK_TIMEOUT)
 
     def get(self, offset=0, count=50):
-        wall_posts = self.api.wall.get(owner_id=self.config.owner_id, offset=offset, count=count)
+        wall_posts = self.api.wall.get(owner_id=self.config.wall_id, offset=offset, count=count)
 
         return Getter.format_posts(wall_posts)
 

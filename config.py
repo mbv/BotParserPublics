@@ -10,7 +10,7 @@ class Config:
         self.config = self._load_config()
 
         self.access_token = self.config['access_token']
-        self.owner_id = self.config['owner_id']
+        self.wall_id = self.config['wall_id']
 
         self.telegram_token = self.config['telegram_token']
         self.telegram_chat_id = self.config['telegram_chat_id']
