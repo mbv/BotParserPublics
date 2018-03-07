@@ -30,6 +30,7 @@ class Sender:
 
         picture.close()
         os.close(file_descriptor)
+        os.remove(path)
 
         self.config.set_last_date(post['date'])
         self.config.save_config()
