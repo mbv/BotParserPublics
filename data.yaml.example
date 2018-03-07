@@ -2,3 +2,4 @@ access_token:
 last_date: 0
 owner_id: -161180646
 telegram_token:
+telegram_chat_id: '@'
