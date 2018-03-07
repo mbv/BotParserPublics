@@ -41,8 +41,9 @@ class Getter:
         have_photo = have_attachments and any(attachment['type'] == 'photo' for attachment in post['attachments'])
         have_link = have_attachments and any(attachment['type'] == 'link' for attachment in post['attachments'])
         is_ads = post['marked_as_ads'] == 1
+        is_repost = 'copy_history' in post
 
-        return have_photo and (not is_ads) and (not have_link)
+        return have_photo and (not is_ads) and (not have_link) and (not is_repost)
 
     @staticmethod
     def photo_url_max_size(post):
