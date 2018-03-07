@@ -14,13 +14,14 @@ class Sender:
 
     def send_posts(self, posts):
         for post in posts:
+            if post['date'] <= self.config.last_date:
+                return
+
             self.send_post(post)
 
-            time.sleep(5)
+            time.sleep(1)
 
     def send_post(self, post):
-        if post['date'] <= self.config.last_date:
-            return
         file_descriptor, path = ImageMaker.make(post)
 
         picture = open(path, 'rb')
@@ -30,5 +31,5 @@ class Sender:
         picture.close()
         os.close(file_descriptor)
 
-        self.config.last_date = post['date']
+        self.config.set_last_date(post['date'])
         self.config.save_config()

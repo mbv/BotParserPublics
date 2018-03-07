@@ -18,6 +18,10 @@ class Config:
         self.last_date = self.config['last_date']
         pass
 
+    def set_last_date(self, last_date):
+        self.last_date = last_date
+        self.config['last_date'] = last_date
+
     @staticmethod
     def _load_config():
         with open(Config.CONFIG_PATH, 'r') as stream:
