@@ -4,7 +4,7 @@ import io
 
 class Config:
 
-    CONFIG_PATH = 'data.yaml'
+    CONFIG_PATH = 'config.yaml'
 
     def __init__(self):
         self.config = self._load_config()
