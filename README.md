@@ -4,20 +4,20 @@ The script receives data from the wall of users / communities / public from VK a
 
 Text from the source post is added to the top of the picture.
 
-### Requirements
+## Requirements
 
 * Python 3.5
 
-### Installation
+## Installation
     cd project_folder
     virtualenv bpp
     
     source bpp/bin/activate
     pip install -r requirements.txt
     
-Need to add running `run.sh` in cron
+Need to add the launch of `run.sh` in cron
 
-### Configuration
+## Configuration
     cp config.yaml.example config.yaml
 
 
