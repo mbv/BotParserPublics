@@ -4,7 +4,7 @@ future==0.16.0
 idna==2.6
 Pillow==5.0.0
 python-telegram-bot==10.0.1
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 urllib3==1.22
 vk==2.0.2
